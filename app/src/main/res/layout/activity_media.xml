@@ -12,30 +12,35 @@
         <TextView
             android:id="@+id/txtvTitle"
             android:layout_column="0"
-            android:layout_row="0"
+            android:layout_columnSpan="3"
             android:layout_gravity="left|top"
-            android:text="Title" />
+            android:layout_row="0"
+            android:text="Title"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large" />
 
         <TextView
             android:id="@+id/txtvCreator"
             android:layout_column="0"
-            android:layout_row="1"
             android:layout_gravity="left|top"
-            android:text="Creator" />
+            android:layout_row="1"
+            android:text="Creator"
+            android:textAppearance="@style/TextAppearance.AppCompat.Caption" />
 
         <TextView
             android:id="@+id/txtvSeason"
             android:layout_column="1"
-            android:layout_row="1"
             android:layout_gravity="left|top"
-            android:text="Season" />
+            android:layout_row="1"
+            android:text="Season"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
 
         <TextView
             android:id="@+id/txtvEpisode"
             android:layout_column="1"
-            android:layout_row="2"
             android:layout_gravity="left|top"
-            android:text="Episode" />
+            android:layout_row="2"
+            android:text="Episode"
+            android:textAppearance="@style/TextAppearance.AppCompat.Small" />
 
         <TextView
             android:id="@+id/txtvCategory"
@@ -54,6 +59,7 @@
 
     <ListView
         android:id="@+id/listvReviews"
+        style="@style/Widget.AppCompat.ListView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
 </LinearLayout>

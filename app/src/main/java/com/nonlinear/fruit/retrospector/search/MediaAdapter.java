@@ -3,6 +3,7 @@ package com.nonlinear.fruit.retrospector.search;
 import android.app.DownloadManager;
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.Color;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -89,6 +90,10 @@ public class MediaAdapter extends ArrayAdapter<Media> implements Filterable{
         holder.titleView.setText(p.getTitle());
         holder.creatorView.setText(p.getCreator());
 
+        if (position%2==0)
+            v.setBackgroundColor(Color.LTGRAY);
+        else
+            v.setBackgroundColor(Color.WHITE);
 
         return v;
     }
@@ -141,7 +146,7 @@ public class MediaAdapter extends ArrayAdapter<Media> implements Filterable{
                 // We perform filtering operation
                 List<Media> nPlanetList = new ArrayList<Media>();
 
-                for (Media p : planetList)
+                for (Media p : origPlanetList)
                     if (QueryProcessor.isMatchForMedia(constraint.toString(),p))
                         nPlanetList.add(p);
 

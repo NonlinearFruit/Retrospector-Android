@@ -3,4 +3,71 @@
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:columnCount="3"
+        android:rowCount="3">
+
+        <TextView
+            android:id="@+id/txtvTitle"
+            android:layout_columnSpan="2"
+            android:layout_column="0"
+            android:layout_row="0"
+            android:layout_gravity="left|top"
+            android:text="Title"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:layout_width="wrap_content" />
+
+        <TextView
+            android:id="@+id/txtvCreator"
+            android:layout_columnSpan="2"
+            android:layout_column="0"
+            android:layout_row="1"
+            android:layout_gravity="left|top"
+            android:text="Creator"
+            android:textAppearance="@style/TextAppearance.AppCompat.Caption" />
+
+        <TextView
+            android:id="@+id/txtvEpisode"
+            android:layout_column="1"
+            android:layout_gravity="left|top"
+            android:layout_row="2"
+            android:text="Episode"
+            android:textAppearance="@style/TextAppearance.AppCompat.Small" />
+
+        <TextView
+            android:id="@+id/txtvSeason"
+            android:layout_column="0"
+            android:layout_gravity="left|top"
+            android:layout_row="2"
+            android:text="Season"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+    </GridLayout>
+
+    <TextView
+        android:id="@+id/txtvUser"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:text="User" />
+
+    <TextView
+        android:id="@+id/txtvDate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Date" />
+
+    <TextView
+        android:id="@+id/txtvRating"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Rating" />
+
+    <TextView
+        android:id="@+id/txtvReview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Review" />
+
 </LinearLayout>

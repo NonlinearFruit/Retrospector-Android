@@ -6,6 +6,7 @@ import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
+import android.util.Log;
 
 import java.util.ArrayList;
 import java.util.Date;
@@ -141,7 +142,6 @@ public class RetroDbHelper extends SQLiteOpenHelper {
                 r.setMediaId(results.getInt(iMediaId));
 
                 reviews.add(r);
-                results.moveToNext();
             }while(results.moveToNext());
         }
         results.close();
@@ -162,9 +162,10 @@ public class RetroDbHelper extends SQLiteOpenHelper {
         if (result == -1)
             return false;
 
-        for (Review review : media.getReviews()) {
-            insertReview(review);
-        }
+        int count = 0;
+        for (Review review : media.getReviews())
+            if (insertReview(review))
+                count++;
 
         return true;
     }

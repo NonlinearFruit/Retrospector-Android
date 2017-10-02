@@ -2,6 +2,8 @@ package com.nonlinear.fruit.retrospector.media;
 
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.Color;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -32,7 +34,7 @@ public class ReviewAdapter extends ArrayAdapter<Review>{
     private List<Review> planetList;
     private Context context;
     private List<Review> origPlanetList;
-    private SimpleDateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy", Locale.ENGLISH);
+    public static final SimpleDateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy", Locale.ENGLISH);
 
     public ReviewAdapter(List<Review> planetList, Context ctx) {
         super(ctx, 0, planetList);
@@ -94,6 +96,11 @@ public class ReviewAdapter extends ArrayAdapter<Review>{
         holder.userView.setText(p.getUser());
         holder.dateView.setText(dateFormat.format(p.getDate()));
         holder.ratingView.setText(p.getRating()+"");
+
+        if (position%2==0)
+            v.setBackgroundColor(Color.LTGRAY);
+        else
+            v.setBackgroundColor(Color.WHITE);
 
         return v;
     }
