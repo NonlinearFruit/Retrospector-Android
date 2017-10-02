@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:columnCount="3"
+        android:rowCount="3">
+
+        <TextView
+            android:id="@+id/txtvTitle"
+            android:layout_column="0"
+            android:layout_row="0"
+            android:layout_gravity="left|top"
+            android:text="Title" />
+
+        <TextView
+            android:id="@+id/txtvCreator"
+            android:layout_column="0"
+            android:layout_row="1"
+            android:layout_gravity="left|top"
+            android:text="Creator" />
+
+        <TextView
+            android:id="@+id/txtvSeason"
+            android:layout_column="1"
+            android:layout_row="1"
+            android:layout_gravity="left|top"
+            android:text="Season" />
+
+        <TextView
+            android:id="@+id/txtvEpisode"
+            android:layout_column="1"
+            android:layout_row="2"
+            android:layout_gravity="left|top"
+            android:text="Episode" />
+
+        <TextView
+            android:id="@+id/txtvCategory"
+            android:layout_column="0"
+            android:layout_row="2"
+            android:layout_gravity="left|top"
+            android:text="Category" />
+
+        <TextView
+            android:id="@+id/txtvDescription"
+            android:layout_column="2"
+            android:layout_row="1"
+            android:layout_gravity="left|top"
+            android:text="Description" />
+    </GridLayout>
+
+    <ListView
+        android:id="@+id/listvReviews"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+</LinearLayout>
