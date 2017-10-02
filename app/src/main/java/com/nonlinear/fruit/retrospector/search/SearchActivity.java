@@ -75,6 +75,8 @@ public class SearchActivity extends AppCompatActivity implements SearchView.OnQu
             @Override
             public void onClick(View view) {
                 addSampleData();
+                mListView.setAdapter(mAdapter = new MediaAdapter(myDb.getAllMedia(),SearchActivity.this));
+                mListView.deferNotifyDataSetChanged();
             }
         });
 
@@ -82,6 +84,8 @@ public class SearchActivity extends AppCompatActivity implements SearchView.OnQu
             @Override
             public void onClick(View view) {
                 myDb.clear();
+                mListView.setAdapter(mAdapter = new MediaAdapter(myDb.getAllMedia(),SearchActivity.this));
+                mListView.deferNotifyDataSetChanged();
             }
         });
     }
