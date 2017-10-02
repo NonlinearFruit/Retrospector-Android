@@ -1,6 +1,7 @@
 package com.nonlinear.fruit.retrospector.media;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -13,6 +14,7 @@ import android.widget.Toast;
 import com.nonlinear.fruit.retrospector.R;
 import com.nonlinear.fruit.retrospector.model.Media;
 import com.nonlinear.fruit.retrospector.model.Review;
+import com.nonlinear.fruit.retrospector.review.ReviewActivity;
 import com.nonlinear.fruit.retrospector.search.MediaAdapter;
 import com.nonlinear.fruit.retrospector.util.QueryProcessor;
 
@@ -66,6 +68,10 @@ public class ReviewAdapter extends ArrayAdapter<Review>{
                 @Override
                 public void onClick(View view) {
                     Toast.makeText(v2.getContext(),"User: "+p.getUser(),Toast.LENGTH_LONG).show();
+                    Intent toReviewWeGo = new Intent(v2.getContext(), ReviewActivity.class);
+                    toReviewWeGo.putExtra("Media ID",p.getMediaId());
+                    toReviewWeGo.putExtra("Review ID",p.getId());
+                    v2.getContext().startActivity(toReviewWeGo);
                 }
             });
             // Now we can fill the layout with the right values

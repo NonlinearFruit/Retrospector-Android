@@ -215,4 +215,10 @@ public class RetroDbHelper extends SQLiteOpenHelper {
         results.close();
         return media;
     }
+
+    public void clear() {
+        SQLiteDatabase db = this.getWritableDatabase();
+        db.delete(Tb_Reviews,null,null);
+        db.delete(Tb_Media,null,null);
+    }
 }
