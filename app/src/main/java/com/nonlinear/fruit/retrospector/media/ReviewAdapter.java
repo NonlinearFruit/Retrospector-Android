@@ -93,7 +93,7 @@ public class ReviewAdapter extends ArrayAdapter<Review>{
 
         holder.userView.setText(p.getUser());
         holder.dateView.setText(dateFormat.format(p.getDate()));
-        holder.ratingView.setText(p.getRating());
+        holder.ratingView.setText(p.getRating()+"");
 
         return v;
     }

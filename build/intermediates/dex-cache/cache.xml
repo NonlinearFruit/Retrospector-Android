@@ -7,7 +7,7 @@
         jumboMode="true"
         optimize="true"
         revision="25.0.2"
-        sha1="82122dfd9e0e95db8b2548a9a8ddb96843c1a373">
+        sha1="a85e7fd65cbd9bb1f84fb4f883a37adb36bda0b9">
         <dex dex="/home/nonfrt/AndroidStudioProjects/Retrospector/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_f2ab7e843c396cf34783cbd42c93e3f22dbb67fe/classes.dex" />
     </item>
     <item

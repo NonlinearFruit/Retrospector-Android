@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.View;
 import android.view.Window;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ListView;
@@ -13,6 +14,7 @@ import android.widget.SearchView;
 import android.widget.Toast;
 
 import com.nonlinear.fruit.retrospector.R;
+import com.nonlinear.fruit.retrospector.media.MediaActivity;
 import com.nonlinear.fruit.retrospector.model.Media;
 import com.nonlinear.fruit.retrospector.model.RetroDbHelper;
 import com.nonlinear.fruit.retrospector.review.ReviewActivity;
@@ -45,6 +47,16 @@ public class SearchActivity extends AppCompatActivity implements SearchView.OnQu
         btnDelete = (Button) findViewById(R.id.btn_delete);
         mListView.setAdapter(mAdapter = new MediaAdapter(myDb.getAllMedia(),this));
         mListView.setTextFilterEnabled(true);
+        mListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                Media media= (Media) parent.getAdapter().getItem(position);
+                Toast.makeText(view.getContext(),"Media: "+media.getTitle(),Toast.LENGTH_LONG).show();
+                Intent toMediaWeGo = new Intent(SearchActivity.this, MediaActivity.class);
+                toMediaWeGo.putExtra("Media ID",media.getId());
+                view.getContext().startActivity(toMediaWeGo);
+            }
+        });
         setupSearchView();
     }
 

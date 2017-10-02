@@ -25,7 +25,7 @@ import java.util.List;
  * https://github.com/codepath/android_guides/wiki/Using-an-ArrayAdapter-with-ListView
  * https://github.com/survivingwithandroid/Surviving-with-android/blob/master/ListView_Filter_Tutorial/src/com/survivingwithandroid/listview/SimpleList/PlanetAdapter.java
  */
-public class MediaAdapter extends ArrayAdapter<Media> implements Filterable {
+public class MediaAdapter extends ArrayAdapter<Media> implements Filterable{
 
     private List<Media> planetList;
     private Context context;
@@ -62,15 +62,15 @@ public class MediaAdapter extends ArrayAdapter<Media> implements Filterable {
             // This a new view we inflate the new layout
             LayoutInflater inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
             final View v2 = inflater.inflate(R.layout.item_media, null);
-            v2.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    Toast.makeText(v2.getContext(),"Media: "+p.getTitle(),Toast.LENGTH_LONG).show();
-                    Intent toMediaWeGo = new Intent(v2.getContext(), MediaActivity.class);
-                    toMediaWeGo.putExtra("Media ID",p.getId());
-                    v2.getContext().startActivity(toMediaWeGo);
-                }
-            });
+//            v2.setOnClickListener(new View.OnClickListener() {
+//                @Override
+//                public void onClick(View view) {
+//                    Toast.makeText(v2.getContext(),"Media: "+p.getTitle(),Toast.LENGTH_LONG).show();
+//                    Intent toMediaWeGo = new Intent(v2.getContext(), MediaActivity.class);
+//                    toMediaWeGo.putExtra("Media ID",p.getId());
+//                    v2.getContext().startActivity(toMediaWeGo);
+//                }
+//            });
             // Now we can fill the layout with the right values
             TextView title = (TextView) v2.findViewById(R.id.mediaTitle);
             TextView creator = (TextView) v2.findViewById(R.id.mediaCreator);
