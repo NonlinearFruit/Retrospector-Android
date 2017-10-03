@@ -2,13 +2,112 @@
 <items version="2" >
 
     <item
+        is-multidex="false"
+        jar="/home/nonfrt/Android/Sdk/extras/m2repository/com/android/support/constraint/constraint-layout-solver/1.0.0-beta4/constraint-layout-solver-1.0.0-beta4.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="0a9cb567dc008f570c28531720168f19148da965">
+        <dex dex="/home/nonfrt/AndroidStudioProjects/Retrospector/app/build/intermediates/pre-dexed/debug/constraint-layout-solver-1.0.0-beta4_2546d87395736ea6fc759ac993eb5382da7ff622.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/nonfrt/.android/build-cache/d7ee5b641ca4095724051e51a2631e8342617f9f/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="0a0ef86b7fa568a52bf6214a0326ca1f1d618da7">
+        <dex dex="/home/nonfrt/AndroidStudioProjects/Retrospector/app/build/intermediates/pre-dexed/debug/classes_f4ce3b82b5d831a6cf1090930f99f2d4cee1d44b.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/nonfrt/.android/build-cache/7b89ecf3b0b024e853d2e029679276fc74a85e0f/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="2a53c4f3518116b8c6aee0e477233f0f7da8616f">
+        <dex dex="/home/nonfrt/AndroidStudioProjects/Retrospector/app/build/intermediates/pre-dexed/debug/classes_d2e030f82174cd8814956ddfe0255f16b7b887d8.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/nonfrt/.android/build-cache/c692d1854ab4db97a6de39909afc70173f148d16/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="aee64634871d88a419d59eb743c1258a60f19700">
+        <dex dex="/home/nonfrt/AndroidStudioProjects/Retrospector/app/build/intermediates/pre-dexed/debug/classes_423f896b5dea98a6dccd22fea6efb4aadc6b92ee.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/nonfrt/Android/Sdk/extras/android/m2repository/com/android/support/support-annotations/25.1.0/support-annotations-25.1.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="64cb6b229a8bdfd907bc8dd46839a0053e4c018d">
+        <dex dex="/home/nonfrt/AndroidStudioProjects/Retrospector/app/build/intermediates/pre-dexed/debug/support-annotations-25.1.0_cc5b5d9ad75858447bbf7be9f9b2edc4fd2e5233.jar" />
+    </item>
+    <item
         is-multidex="true"
         jar="/home/nonfrt/AndroidStudioProjects/Retrospector/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
         jumboMode="true"
         optimize="true"
         revision="25.0.2"
-        sha1="a85e7fd65cbd9bb1f84fb4f883a37adb36bda0b9">
+        sha1="f3d11864d35e9c2745cc76e1b22256f8c65446cf">
         <dex dex="/home/nonfrt/AndroidStudioProjects/Retrospector/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_f2ab7e843c396cf34783cbd42c93e3f22dbb67fe/classes.dex" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/nonfrt/.android/build-cache/1b190bd3483b6eae75223ca16e155dfa2aaf81ce/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="1630658fbc2d222b988603c27b4a4249586fbfe7">
+        <dex dex="/home/nonfrt/AndroidStudioProjects/Retrospector/app/build/intermediates/pre-dexed/debug/classes_335631a699d6a689007a890302d3f23716ef221f.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/nonfrt/.android/build-cache/5ee3f96e84bb73042b1348ca0ba074a1fe44815a/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="6fb6ac3e8d3b9013819920d9ea11f3803c4c0033">
+        <dex dex="/home/nonfrt/AndroidStudioProjects/Retrospector/app/build/intermediates/pre-dexed/debug/classes_57f88943d61d39227886ad74e005d6e7936b9f46.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/nonfrt/.android/build-cache/2d2917ef143dc3058cd86606418b29142538081a/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="f02263e35e52668dd17b73bf961437e3d562b35f">
+        <dex dex="/home/nonfrt/AndroidStudioProjects/Retrospector/app/build/intermediates/pre-dexed/debug/classes_e26942077210c42a437bc6e05fe4c8bc9eebad73.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/nonfrt/.android/build-cache/3dcbc411fe26775180e91d7802fc968da0305c89/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="662d7533b25a666c649c10a16b42edfb95f25a4f">
+        <dex dex="/home/nonfrt/AndroidStudioProjects/Retrospector/app/build/intermediates/pre-dexed/debug/classes_7819b7bf19677f6bcb40684edf058dc73228d8b2.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/nonfrt/.android/build-cache/df1a359f075d290b95212338b05c7dc095b59bd2/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="ca3c7aa31e2726a400a6e552b93cb9f63c9a1e6d">
+        <dex dex="/home/nonfrt/AndroidStudioProjects/Retrospector/app/build/intermediates/pre-dexed/debug/classes_b43961e9b2f6386cc64feb5e36973bfb4f1a6099.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/nonfrt/.android/build-cache/4339ec6a271f66965b2560d3e79669bba29117ef/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="e79aa3d9a16f8c9f16377c0608de70a8f31e5d80">
+        <dex dex="/home/nonfrt/AndroidStudioProjects/Retrospector/app/build/intermediates/pre-dexed/debug/classes_0a796f1bbceac95b1fe0a8c0df4285714ba28c79.jar" />
     </item>
     <item
         is-multidex="true"
@@ -18,6 +117,15 @@
         revision="25.0.2"
         sha1="caff8e51a24901cfc9cd7e1cf83d84f4cb0c103b">
         <dex dex="/home/nonfrt/AndroidStudioProjects/Retrospector/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run_d79cbe0d1a4df81dffb643b142d6bdd877367d45/classes.dex" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/nonfrt/.android/build-cache/58a9e5a9a1c18cb1a7bfeea9015224af70a79c1a/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
+        <dex dex="/home/nonfrt/AndroidStudioProjects/Retrospector/app/build/intermediates/pre-dexed/debug/classes_2538b7b4fa35b8f9c6b043c97158b00b9c8daf04.jar" />
     </item>
 
 </items>

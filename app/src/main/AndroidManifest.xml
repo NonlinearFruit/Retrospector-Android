@@ -9,15 +9,18 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".search.SearchActivity">
+        <activity android:name=".search.SearchActivity"
+            android:label="Retrospector" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".media.MediaActivity"></activity>
-        <activity android:name=".review.ReviewActivity"></activity>
+        <activity android:name=".media.MediaActivity"
+            android:label="Media"></activity>
+        <activity android:name=".review.ReviewActivity"
+            android:label="Review"></activity>
     </application>
 
 </manifest>

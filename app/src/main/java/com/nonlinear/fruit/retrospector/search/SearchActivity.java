@@ -35,7 +35,6 @@ public class SearchActivity extends AppCompatActivity implements SearchView.OnQu
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        getWindow().requestFeature(Window.FEATURE_ACTION_BAR);
 
         setContentView(R.layout.activity_search);
 
@@ -46,7 +45,7 @@ public class SearchActivity extends AppCompatActivity implements SearchView.OnQu
         btnFake = (Button) findViewById(R.id.btn_fake);
         btnDelete = (Button) findViewById(R.id.btn_delete);
         mListView.setAdapter(mAdapter = new MediaAdapter(myDb.getAllMedia(),this));
-        mListView.setTextFilterEnabled(true);
+        mListView.setTextFilterEnabled(false);
         mListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
@@ -92,9 +91,11 @@ public class SearchActivity extends AppCompatActivity implements SearchView.OnQu
 
     public boolean onQueryTextChange(String newText) {
         if (TextUtils.isEmpty(newText)) {
-            mListView.clearTextFilter();
+//            mListView.clearTextFilter();
+            mAdapter.getFilter().filter("");
         } else {
-            mListView.setFilterText(newText.toString());
+//            mListView.setFilterText(newText.toString());
+            mAdapter.getFilter().filter(newText.toString());
         }
         return true;
     }
