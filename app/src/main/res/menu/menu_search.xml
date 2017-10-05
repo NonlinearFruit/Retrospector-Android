@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_height="wrap_content"
+    android:layout_width="wrap_content">
+<item android:id="@+id/open_server"
+    android:onClick="openServer"
+    android:title="Open Client"/>
+<item android:id="@+id/refresh_data"
+    android:onClick="refreshData"
+    android:title="Refresh Data" />
+<item android:id="@+id/delete_data"
+    android:onClick="deleteData"
+    android:title="Delete Data" />
+</menu>

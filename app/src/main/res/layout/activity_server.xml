@@ -4,37 +4,41 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="com.nonlinear.fruit.retrospector.server.ServerActivity" >
+    tools:context="com.nonlinear.fruit.retrospector.server.ServerActivity"
+    android:weightSum="1">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:autoLink="web"
-        android:text="http://android-er.blogspot.com/"
-        android:textStyle="bold" />
-
-    <TextView
+    <Space
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="File Transfer Client"
-        android:textStyle="bold" />
+        android:layout_weight="0.25" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Enter the IP address of the Retrospector server and click Connect to re-download Media" />
 
     <EditText
         android:id="@+id/address"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="dstAddress" />
+        android:hint="Server IP Address" />
 
     <TextView
         android:id="@+id/port"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:text="port: ???" />
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.08" />
 
     <Button
         android:id="@+id/connect"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Connect..." />
+        android:text="Connect" />
 
 </LinearLayout>

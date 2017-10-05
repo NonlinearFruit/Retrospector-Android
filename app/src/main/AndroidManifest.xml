@@ -23,7 +23,7 @@
         <activity android:name=".review.ReviewActivity"
             android:label="Review"></activity>
         <activity android:name=".server.ServerActivity"
-            android:label="Server"></activity>
+            android:label="Client"></activity>
     </application>
 
 </manifest>

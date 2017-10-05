@@ -1,9 +1,13 @@
 package com.nonlinear.fruit.retrospector.search;
 
+import android.content.ClipData;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.TextUtils;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.Window;
 import android.widget.AdapterView;
@@ -30,8 +34,6 @@ public class SearchActivity extends AppCompatActivity implements SearchView.OnQu
     private SearchView mSearchView;
     private ListView mListView;
     private MediaAdapter mAdapter;
-    private Button btnFake;
-    private Button btnDelete;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,8 +45,6 @@ public class SearchActivity extends AppCompatActivity implements SearchView.OnQu
 
         mSearchView = (SearchView) findViewById(R.id.search_view);
         mListView = (ListView) findViewById(R.id.list_view);
-        btnFake = (Button) findViewById(R.id.btn_fake);
-        btnDelete = (Button) findViewById(R.id.btn_delete);
         mListView.setAdapter(mAdapter = new MediaAdapter(myDb.getAllMedia(),this));
         mListView.setTextFilterEnabled(false);
         mListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
@@ -60,33 +60,32 @@ public class SearchActivity extends AppCompatActivity implements SearchView.OnQu
         setupSearchView();
     }
 
-    private void addSampleData() {
-        for (Media m : SampleData.getMedia()) {
-            myDb.insertMedia(m);
-        }
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.menu_search, menu);
+        return super.onCreateOptionsMenu(menu);
+    }
+
+    public void openServer(MenuItem menu) {
+        Intent toServerWeGo = new Intent(SearchActivity.this, ServerActivity.class);
+        this.startActivity(toServerWeGo);
+    }
+
+    public void refreshData(MenuItem menu) {
+        mListView.setAdapter(mAdapter = new MediaAdapter(myDb.getAllMedia(),SearchActivity.this));
+        mListView.deferNotifyDataSetChanged();
+    }
+
+    public void deleteData(MenuItem menu) {
+        myDb.clear();
+        refreshData(menu);
     }
 
     private void setupSearchView() {
         mSearchView.setIconifiedByDefault(false);
         mSearchView.setOnQueryTextListener(this);
         mSearchView.setSubmitButtonEnabled(false);
-
-        btnFake.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent toServerWeGo = new Intent(SearchActivity.this, ServerActivity.class);
-                view.getContext().startActivity(toServerWeGo);
-            }
-        });
-
-        btnDelete.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                myDb.clear();
-                mListView.setAdapter(mAdapter = new MediaAdapter(myDb.getAllMedia(),SearchActivity.this));
-                mListView.deferNotifyDataSetChanged();
-            }
-        });
     }
 
     public boolean onQueryTextChange(String newText) {
