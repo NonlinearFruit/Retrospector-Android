@@ -18,6 +18,7 @@ import com.nonlinear.fruit.retrospector.media.MediaActivity;
 import com.nonlinear.fruit.retrospector.model.Media;
 import com.nonlinear.fruit.retrospector.model.RetroDbHelper;
 import com.nonlinear.fruit.retrospector.review.ReviewActivity;
+import com.nonlinear.fruit.retrospector.server.ServerActivity;
 import com.nonlinear.fruit.retrospector.util.SampleData;
 
 // http://www.java2s.com/Code/Android/2D-Graphics/ShowsalistthatcanbefilteredinplacewithaSearchViewinnoniconifiedmode.htm
@@ -73,9 +74,8 @@ public class SearchActivity extends AppCompatActivity implements SearchView.OnQu
         btnFake.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                addSampleData();
-                mListView.setAdapter(mAdapter = new MediaAdapter(myDb.getAllMedia(),SearchActivity.this));
-                mListView.deferNotifyDataSetChanged();
+                Intent toServerWeGo = new Intent(SearchActivity.this, ServerActivity.class);
+                view.getContext().startActivity(toServerWeGo);
             }
         });
 
