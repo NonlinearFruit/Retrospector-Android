@@ -136,7 +136,7 @@ public class Media {
      * @return
      */
     public int getCurrentRating(){
-        Date newest = new Date(1900,1,1);
+        Date newest = new Date(0L);
         int rating = 0;
         for (Review review : reviews) {
             Date rDate = review.getDate();

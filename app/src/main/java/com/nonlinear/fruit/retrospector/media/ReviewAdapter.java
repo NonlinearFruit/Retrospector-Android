@@ -69,7 +69,7 @@ public class ReviewAdapter extends ArrayAdapter<Review>{
             v2.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    Toast.makeText(v2.getContext(),"User: "+p.getUser(),Toast.LENGTH_LONG).show();
+//                    Toast.makeText(v2.getContext(),"User: "+p.getUser(),Toast.LENGTH_LONG).show();
                     Intent toReviewWeGo = new Intent(v2.getContext(), ReviewActivity.class);
                     toReviewWeGo.putExtra("Media ID",p.getMediaId());
                     toReviewWeGo.putExtra("Review ID",p.getId());

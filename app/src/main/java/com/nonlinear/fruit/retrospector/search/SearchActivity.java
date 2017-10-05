@@ -50,7 +50,7 @@ public class SearchActivity extends AppCompatActivity implements SearchView.OnQu
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 Media media= (Media) parent.getAdapter().getItem(position);
-                Toast.makeText(view.getContext(),"Media: "+media.getTitle(),Toast.LENGTH_LONG).show();
+//                Toast.makeText(view.getContext(),"Media: "+media.getTitle(),Toast.LENGTH_LONG).show();
                 Intent toMediaWeGo = new Intent(SearchActivity.this, MediaActivity.class);
                 toMediaWeGo.putExtra("Media ID",media.getId());
                 view.getContext().startActivity(toMediaWeGo);
