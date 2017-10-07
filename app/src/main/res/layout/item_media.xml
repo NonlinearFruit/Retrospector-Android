@@ -2,14 +2,49 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent">
-    <TextView
-        android:id="@+id/mediaTitle"
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/mediaTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_toStartOf="@+id/mediaCreator"
+            android:lineSpacingExtra="-5sp"
+            android:text="Title wwwww wwwwvwwww wwwwwwwwwwww ww wwww ww ww wwww www wwwwww wwwww wwww w www wwwwww wwww"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/mediaCreator"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Creator"
+            android:textAppearance="@style/TextAppearance.AppCompat.Caption"
+            android:layout_alignParentRight="true"/>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Title" />
-    <TextView
-        android:id="@+id/mediaCreator"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Creator" />
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/mediaSeason"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Season"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+
+        <TextView
+            android:id="@+id/mediaEpisode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Episode"
+            android:textAppearance="@style/TextAppearance.AppCompat.Small" />
+    </LinearLayout>
 </LinearLayout>

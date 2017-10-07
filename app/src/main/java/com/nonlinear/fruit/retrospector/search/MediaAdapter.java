@@ -75,10 +75,14 @@ public class MediaAdapter extends ArrayAdapter<Media> implements Filterable{
             // Now we can fill the layout with the right values
             TextView title = (TextView) v2.findViewById(R.id.mediaTitle);
             TextView creator = (TextView) v2.findViewById(R.id.mediaCreator);
+            TextView season = (TextView) v2.findViewById(R.id.mediaSeason);
+            TextView episode = (TextView) v2.findViewById(R.id.mediaEpisode);
 
 
             holder.titleView = title;
             holder.creatorView = creator;
+            holder.seasonView = season;
+            holder.episodeView = episode;
 
             v2.setTag(holder);
             v = v2;
@@ -89,6 +93,8 @@ public class MediaAdapter extends ArrayAdapter<Media> implements Filterable{
 
         holder.titleView.setText(p.getTitle());
         holder.creatorView.setText(p.getCreator());
+        holder.seasonView.setText(p.getSeason());
+        holder.episodeView.setText(p.getEpisode());
 
         if (position%2==0)
             v.setBackgroundColor(Color.LTGRAY);
@@ -111,6 +117,8 @@ public class MediaAdapter extends ArrayAdapter<Media> implements Filterable{
     private static class PlanetHolder {
         public TextView titleView;
         public TextView creatorView;
+        public TextView seasonView;
+        public TextView episodeView;
     }
 
 
