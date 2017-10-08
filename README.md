@@ -1,9 +1,11 @@
 # Retrospector
-This is an Android reference tool for [Retrospector][retro]; intended for looking up your ratings on-the-go. As of version `0.1` there is no way to sync the desktop and android databases. However there is some fake data to play with.
+This is an Android reference tool for [Retrospector][retro]; intended for looking up your ratings on-the-go. Syncing with the desktop is now easy as pi (see Syncing); so your entire database of movie reviews goes everywhere you do!
 
 
 ## Features
 Here are some of the cool features contained in this app (as of version `0.3`). 
+
+### Syncing
 
 ### Main Screen
 The main screen is a list of all media. It is used to lookup a particular media.
