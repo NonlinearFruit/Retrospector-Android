@@ -45,18 +45,18 @@ public class MediaAdapter extends ArrayAdapter<Media> implements Filterable{
     }
 
     public Media getItem(int position) {
-        return planetList.get(position);
+        return planetList.get(getCount()-position-1);
     }
 
     public long getItemId(int position) {
-        return planetList.get(position).hashCode();
+        return getItem(position).hashCode();
     }
 
     public View getView(int position, View convertView, ViewGroup parent) {
         View v = convertView;
 
         PlanetHolder holder = new PlanetHolder();
-        final Media p = planetList.get(position);
+        final Media p = getItem(position);
 
         // First let's verify the convertView is not null
         if (convertView == null) {
@@ -105,7 +105,8 @@ public class MediaAdapter extends ArrayAdapter<Media> implements Filterable{
     }
 
     public void resetData() {
-        planetList = origPlanetList;
+        planetList.clear();
+        planetList.addAll(origPlanetList);
     }
 
 
@@ -168,8 +169,10 @@ public class MediaAdapter extends ArrayAdapter<Media> implements Filterable{
         protected void publishResults(CharSequence constraint, FilterResults results) {
 
             // Now we have to inform the adapter about the new list filtered
-            if (results.count == 0)
+            if (results.count == 0) {
+                planetList = (List<Media>) results.values;
                 notifyDataSetInvalidated();
+            }
             else {
                 planetList = (List<Media>) results.values;
                 notifyDataSetChanged();
