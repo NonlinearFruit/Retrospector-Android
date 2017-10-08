@@ -26,7 +26,6 @@ public class MediaActivity extends AppCompatActivity{
     TextView season;
     TextView episode;
     TextView category;
-    TextView description;
     ListView reviewLister;
     ReviewAdapter rAdapter;
 
@@ -48,7 +47,6 @@ public class MediaActivity extends AppCompatActivity{
         season = (TextView) findViewById(R.id.txtvSeason);
         episode = (TextView) findViewById(R.id.txtvEpisode);
         category = (TextView) findViewById(R.id.txtvCategory);
-        description = (TextView) findViewById(R.id.txtvDescription);
         reviewLister = (ListView) findViewById(R.id.listvReviews);
         reviewLister.setAdapter(rAdapter = new ReviewAdapter(media.getReviews(),this));
 
@@ -61,6 +59,5 @@ public class MediaActivity extends AppCompatActivity{
         season.setText(media.getSeason());
         episode.setText(media.getEpisode());
         category.setText(media.getCategory());
-        description.setText(media.getDescription());
     }
 }
