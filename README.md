@@ -3,7 +3,7 @@ This is an Android reference tool for [Retrospector][retro]; intended for lookin
 
 
 ## Features
-Here are some of the cool features contained in this app (as of version `0.1`). 
+Here are some of the cool features contained in this app (as of version `0.3`). 
 
 ### Main Screen
 The main screen is a list of all media. It is used to lookup a particular media.
