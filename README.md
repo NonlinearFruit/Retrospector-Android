@@ -11,7 +11,7 @@ Here are some of the cool features contained in this app (as of version `0.3`).
 The main screen is a list of all media. It is used to lookup a particular media.
 <br><img src="/screenshots/main.png" alt="Main Screen" width="40%" height="40%">
 
-To that end, it contains a search box that will fuzzy search the media. This search is identical to the one in the [desktop version][retro].
+To that end, it contains a search box that will search the media. This search is identical to the one in the [desktop version][retro].
 <br><img src="/screenshots/search.png" alt="Search" width="40%" height="40%">
 
 ### Media Screen
