@@ -3,59 +3,58 @@
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <GridLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:columnCount="3"
-        android:rowCount="3">
-
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
         <TextView
             android:id="@+id/txtvTitle"
-            android:layout_column="0"
-            android:layout_columnSpan="3"
-            android:layout_gravity="left|top"
-            android:layout_row="0"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:text="Title"
-            android:textAppearance="@style/TextAppearance.AppCompat.Large" />
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:layout_alignParentLeft="true"/>
 
         <TextView
             android:id="@+id/txtvCreator"
-            android:layout_column="0"
-            android:layout_gravity="left|top"
-            android:layout_row="1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:text="Creator"
-            android:textAppearance="@style/TextAppearance.AppCompat.Caption" />
+            android:textAppearance="@style/TextAppearance.AppCompat.Caption"
+            android:layout_alignParentRight="true"/>
+    </RelativeLayout>
 
-        <TextView
-            android:id="@+id/txtvSeason"
-            android:layout_column="1"
-            android:layout_gravity="left|top"
-            android:layout_row="1"
-            android:text="Season"
-            android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
 
-        <TextView
-            android:id="@+id/txtvEpisode"
-            android:layout_column="1"
-            android:layout_gravity="left|top"
-            android:layout_row="2"
-            android:text="Episode"
-            android:textAppearance="@style/TextAppearance.AppCompat.Small" />
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_alignParentLeft="true">
+
+            <TextView
+                android:id="@+id/txtvSeason"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Season"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+
+            <TextView
+                android:id="@+id/txtvEpisode"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Episode"
+                android:textAppearance="@style/TextAppearance.AppCompat.Small" />
+        </LinearLayout>
 
         <TextView
             android:id="@+id/txtvCategory"
-            android:layout_column="0"
-            android:layout_gravity="left|top"
-            android:layout_row="2"
-            android:text="Category" />
-
-        <TextView
-            android:id="@+id/txtvDescription"
-            android:layout_column="2"
-            android:layout_gravity="left|top"
-            android:layout_row="1"
-            android:text="Description" />
-    </GridLayout>
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Category"
+            android:layout_alignParentRight="true"/>
+    </RelativeLayout>
 
     <ListView
         android:id="@+id/listvReviews"

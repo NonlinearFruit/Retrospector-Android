@@ -34,7 +34,7 @@ public class ReviewAdapter extends ArrayAdapter<Review>{
     private List<Review> planetList;
     private Context context;
     private List<Review> origPlanetList;
-    public static final SimpleDateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy", Locale.ENGLISH);
+    public static final SimpleDateFormat dateFormat = new SimpleDateFormat("MM/dd/yyyy", Locale.ENGLISH);
 
     public ReviewAdapter(List<Review> planetList, Context ctx) {
         super(ctx, 0, planetList);
