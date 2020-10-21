@@ -1,3 +1,5 @@
+[![Known Vulnerabilities](https://snyk.io/test/github/NonlinearFruit/Retrospector-Android/badge.svg)](https://snyk.io/test/github/NonlinearFruit/Retrospector-Android)
+
 # Retrospector
 This is an Android reference tool for [Retrospector][retro]; intended for looking up your ratings on-the-go. Syncing with the desktop is now easy as pi (see Syncing); so your entire database of movie reviews goes everywhere you do!
 
